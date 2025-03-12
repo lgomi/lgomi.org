@@ -1,4 +1,7 @@
-import { title, subtitle } from "@/components/primitives";
+import Image from "next/image";
+
+import { title } from "@/components/primitives";
+
 
 export default function Home() {
   return (
@@ -7,7 +10,12 @@ export default function Home() {
         <span className={title()}>Liberal Gun Owners</span>
         <br />
         <span className={title()}>of Michigan</span>
-        <div className={subtitle({ class: "mt-4" })}>Coming soon!</div>
+        <Image
+          alt="Coming Soon"
+          height={500}
+          src="/coming-soon.png"
+          width={500}
+        />
       </div>
     </section>
   );
