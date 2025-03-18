@@ -1,12 +1,12 @@
+"use client";
+
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
-  NavbarMenu,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
-} from "@heroui/navbar";
-import { Link } from "@heroui/link";
+} from "@heroui/react";
+import { Link } from "@heroui/react";
 import { link as linkStyles } from "@heroui/theme";
 import { button as buttonStyles } from "@heroui/theme";
 import NextLink from "next/link";
@@ -15,6 +15,9 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
+
+  const { contact, join } = siteConfig.navButtonItems;
+
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -48,38 +51,26 @@ export const Navbar = () => {
         justify="end"
       >
         <Link
-          className={buttonStyles({
+          className={`${buttonStyles({
+            color: "secondary",
+            radius: "full",
+            variant: "shadow",
+          })} font-bold`}
+          href={contact.href}
+        >
+          {contact.label}
+        </Link>
+        <Link
+          className={`${buttonStyles({
             color: "primary",
             radius: "full",
             variant: "shadow",
-          })}
-          href={siteConfig.contact.href}
+          })} font-bold`}
+          href={join.href}
         >
-          {siteConfig.contact.label}
+          {join.label}
         </Link>
       </NavbarContent>
-
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
     </HeroUINavbar>
   );
 };
