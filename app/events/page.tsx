@@ -5,7 +5,7 @@ import { title } from "@/components/primitives";
 export default function EventsPage() {
   return (
     <div>
-      <h1 className={title()}>Events</h1>
+      <h1 className={title({ class: "mb-6 block" })}>Events</h1>
       <Image
         alt="Coming Soon"
         height={500}

@@ -4,7 +4,7 @@ import { title } from "@/components/primitives";
 export default function AboutPage() {
   return (
     <div>
-      <h1 className={title()}>About Us</h1>
+      <h1 className={title({ class: "mb-6 block text-center" })}>About Us</h1>
       <div>
         <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
           <p>

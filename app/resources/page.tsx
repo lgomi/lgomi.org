@@ -10,7 +10,7 @@ import ResourcesModal from "@/components/custom/ResourcesModal/ResourcesModal";
 export default function ResourcesPage() {
   return (
     <div>
-      <h1 className={title()}>Resources</h1>
+      <h1 className={title({ class: "mb-6 block" })}>Resources</h1>
       <div className="my-12">
         <Card
           classNames={{
