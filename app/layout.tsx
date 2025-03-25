@@ -47,7 +47,7 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-3">
-             <p>&copy; 2025 LGOMi</p>
+             <p>established 2025</p>
             </footer>
           </div>
         </Providers>

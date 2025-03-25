@@ -13,13 +13,15 @@ import {
 import PersonalInfo from "@/components/custom/JoinForm/PersonalInfo";
 import Interview from "@/components/custom/JoinForm/Interview";
 import Socials from "@/components/custom/JoinForm/Socials";
-import Acknowledgements from "@/components/custom/JoinForm/Acknowledgements";
 import HoneyPot from "@/components/custom/HoneyPot/HoneyPot";
+import Acknowledgements from "@/components/custom/JoinForm/Acknowledgements/Acknowledgements";
 
 export default function JoinForm() {
-
   const onJoinFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const data = Object.fromEntries(new FormData(event.currentTarget));
+
+    console.log(data);
   };
 
   return (
@@ -37,12 +39,12 @@ export default function JoinForm() {
             <PersonalInfo />
             <Interview />
             <Socials />
-            <Acknowledgements />
             <HoneyPot />
           </CardBody>
           <Divider />
-          <CardFooter className="flex justify-end">
-            <Button color="primary" type="submit">
+          <CardFooter className="flex flex-col">
+            <Acknowledgements />
+            <Button className="self-end" color="primary" type="submit">
               Submit Application
             </Button>
           </CardFooter>

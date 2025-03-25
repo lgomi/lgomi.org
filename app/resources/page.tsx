@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { Card, CardHeader, CardBody, Divider } from "@heroui/react";
 
 import { externalResources, clubResources } from "@/config/resources";
@@ -11,7 +11,13 @@ export default function ResourcesPage() {
   return (
     <div>
       <h1 className={title({ class: "mb-6 block" })}>Resources</h1>
-      <div className="my-12">
+      <Image
+        alt="Coming Soon"
+        height={500}
+        src="/coming-soon.png"
+        width={500}
+      />
+      <div className="my-12 hidden">
         <Card
           classNames={{
             header: "bg-gray-200",

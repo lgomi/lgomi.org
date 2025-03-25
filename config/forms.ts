@@ -318,20 +318,14 @@ export const forms = {
     },
     acknowledgements: [
       {
-        fieldType: "checkbox",
         id: "rules",
-        label:
+        content:
           "I acknowledge this is gun club focused on education, safety, and community support.",
-        required: true,
-        validation: (value: string) => null,
       },
       {
-        fieldType: "checkbox",
         id: "behavior",
-        label:
+        content:
           "I acknowledge that it is my personal responsibility to conduct myself safely and respectfully, both in-person and virtually, and to comply with all state and federal laws pertaining to the ownership, carry, and use of a firearm. I understand that my membership is subject to disciplinary action up to and including revocation for violations including (but not limited to) unsafe firearm handling practices; threats, bullying, or harassment of members; gaslighting; promotion of mis/disinformation; and espousing political and social ideologies that are at extreme odds with the purpose of this organization.",
-        required: true,
-        validation: (value: string) => null,
       },
     ],
   },

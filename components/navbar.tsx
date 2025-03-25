@@ -15,7 +15,6 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
-
   const { contact, join } = siteConfig.navButtonItems;
 
   return (
@@ -46,11 +45,9 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
+      <NavbarContent className="sm:flex basis-1/5 sm:basis-full" justify="end">
         <Link
+          isDisabled
           className={`${buttonStyles({
             color: "secondary",
             radius: "full",
@@ -61,6 +58,7 @@ export const Navbar = () => {
           {contact.label}
         </Link>
         <Link
+          isDisabled
           className={`${buttonStyles({
             color: "primary",
             radius: "full",
