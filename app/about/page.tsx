@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 import Disclaimer from "@/components/custom/Disclaimer/Disclaimer";
 import { title } from "@/components/primitives";
@@ -100,7 +100,7 @@ export default function AboutPage() {
           rel="noreferrer"
           target="_blank"
         >
-          <Image
+          <img
             alt="Liberal Gun Owners of Michigan Discord server qr code"
             height={300}
             src="/qr_code.png"
