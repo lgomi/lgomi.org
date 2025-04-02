@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Disclaimer from "@/components/custom/Disclaimer/Disclaimer";
 import { title } from "@/components/primitives";
 
@@ -19,15 +21,15 @@ export default function AboutPage() {
         <p className="my-6">
           The <span>Second Amendment</span> assures the right to bear arms for
           all Americans, not just conservatives. Despite centrist
-          Democrats&apos; misguided but surprisingly effective efforts to pass
-          legislation infringing on 2A rights, gun ownership is on the rise in
-          liberal and leftist circles.
+          Democrats&apos; misguided but thus far effective efforts to pass
+          legislation infringing on Second Amendment rights, gun ownership is on
+          the rise in liberal and leftist circles.
         </p>
         <p className="my-6">
           Liberal Gun Owners of Michigan is a homegrown diverse and inclusive
           social organization with members across the state dedicated to
-          building a community of who share the common bonds of firearm
-          ownership and liberal ideology (and likely D&D too).
+          building a community of who share common bonds around firearm
+          ownership and left-of-center ideology (and likely D&D too).
         </p>
         <p className="my-6">
           Our aim is to foster opportunities for our members to meet at local
@@ -36,10 +38,10 @@ export default function AboutPage() {
           include:
         </p>
         <ul className="my-6 pl-16 list-disc">
-          <li>Local political protests</li>
+          <li>CPL and firearms education classes</li>
+          <li>Local political protests and rallies</li>
           <li>Volunteering opportunities</li>
           <li>First aid / triage classes</li>
-          <li>CPL and shooting courses</li>
           <li>FFL services</li>
           <li>...and more!</li>
         </ul>
@@ -53,12 +55,12 @@ export default function AboutPage() {
             or paramilitary organization.
           </p>
           <p className="my-4">
-            We are a social organization for liberal and leftist people to come
-            together as a community and share a common bond. Any claims
-            otherwise will taken seriously.
+            We are a social organization focused on safety, education,
+            community, and inclusion. Any claims or assertions that LGOMi is a
+            militant organization of any sort will taken seriously.
           </p>
           <p className="my-4">
-            All participation in this organization shall be in a peaceful
+            All participation in this organization shall done in a peaceful
             manner. All participants are expected to conduct themselves in
             compliance with the laws of the state of Michigan the US government.
           </p>
@@ -67,8 +69,8 @@ export default function AboutPage() {
       <h1 className={title()}>Membership</h1>
       <div>
         <p className="my-6">
-          Currently we are a voluntary network of like-minded individuals across
-          the state. We plan social meetups and range events using Discord and
+          We are a voluntary network of like-minded individuals across the
+          state. We plan social meetups and range events using Discord and
           Signal.
         </p>
         <p className="my-6">
@@ -79,14 +81,32 @@ export default function AboutPage() {
           your own conduct in all online channels.
         </p>
         <p className="my-6">
-          In the future, we may adopt a more official organizational structure
-          that may offer an additional dues-based level of membership with
-          additional benefits.{" "}
+          We are a new organization, still in the process of electing a board,
+          establishing bylaws, and obtaining our non-profit 501c(4) status. Once
+          established, our bylaws allow for an additional dues-based level of
+          membership that may provide additional benefits.{" "}
         </p>
         <p className="my-6">
-          If you&apos;d like to join our growing ranks, apply using the{" "}
-          <span className="font-bold">Request to Join</span> button above.
+          If you&apos;d like to join our growing ranks,{" "}
+          <span className="hidden">
+            apply using the <span className="font-bold">Request to Join</span>{" "}
+            button above
+          </span>
+          scan or click the QR code below to join our Discord server.
         </p>
+        <a
+          className="flex justify-center"
+          href="https://disboard.org/server/1344828860935569519"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="Liberal Gun Owners of Michigan Discord server qr code"
+            height={300}
+            src="/qr_code.png"
+            width={300}
+          />
+        </a>
       </div>
     </div>
   );

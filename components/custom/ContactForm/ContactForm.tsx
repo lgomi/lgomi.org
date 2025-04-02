@@ -19,7 +19,7 @@ export default function ContactForm() {
   const onContactFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    let contactData = Object.fromEntries(new FormData(event.currentTarget));
+    // let contactData = Object.fromEntries(new FormData(event.currentTarget));
     // Todo  - add form handling logic
   };
 

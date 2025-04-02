@@ -19,9 +19,9 @@ import Acknowledgements from "@/components/custom/JoinForm/Acknowledgements/Ackn
 export default function JoinForm() {
   const onJoinFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = Object.fromEntries(new FormData(event.currentTarget));
+    // const data = Object.fromEntries(new FormData(event.currentTarget));
 
-    console.log(data);
+    // console.log(data);
   };
 
   return (

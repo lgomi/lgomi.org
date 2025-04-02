@@ -11,7 +11,7 @@ export const clubResources = [
     title: "FAQ",
     content: "faq goes here",
   },
-]
+];
 
 export const externalResources = [
   {
@@ -73,7 +73,7 @@ export type TClubResource = {
   id: number;
   title: string;
   content: string | ReactNode;
-}
+};
 
 type TExternalResource = {
   id: number;
