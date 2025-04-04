@@ -28,7 +28,7 @@ export default function AboutPage() {
         <p className="my-6">
           Liberal Gun Owners of Michigan is a homegrown diverse and inclusive
           social organization with members across the state dedicated to
-          building a community of who share common bonds around firearm
+          building a community of people who share common bonds around firearm
           ownership and left-of-center ideology (and likely D&D too).
         </p>
         <p className="my-6">
@@ -57,12 +57,12 @@ export default function AboutPage() {
           <p className="my-4">
             We are a social organization focused on safety, education,
             community, and inclusion. Any claims or assertions that LGOMi is a
-            militant organization of any sort will taken seriously.
+            militant organization of any sort will be taken seriously.
           </p>
           <p className="my-4">
-            All participation in this organization shall done in a peaceful
+            All participation in this organization shall be done in a peaceful
             manner. All participants are expected to conduct themselves in
-            compliance with the laws of the state of Michigan the US government.
+            compliance with the laws of the state of Michigan and the US government.
           </p>
         </Disclaimer>
       </div>
