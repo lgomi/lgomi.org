@@ -8,16 +8,6 @@ export default function AboutPage() {
     <div>
       <h1 className={title({ class: "mb-6 block text-center" })}>About Us</h1>
       <div>
-        <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
-          <p>
-            A well regulated Militia, being necessary to the security of a free
-            State, the right of the people to keep and bear Arms, shall not be
-            infringed.
-          </p>
-          <p className="text-right italic mt-4 text-sm">
-            - <cite>Second Amendment of the United States Constitution</cite>
-          </p>
-        </blockquote>
         <p className="my-6">
           The <span>Second Amendment</span> assures the right to bear arms for
           all Americans, not just conservatives. Despite centrist
