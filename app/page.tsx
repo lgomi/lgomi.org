@@ -41,7 +41,7 @@ export default function Home() {
           <img
             alt="Liberal Gun Owners of Michigan Discord server qr code"
             height={300}
-            src="/qr_code.png"
+            src="/lgomi_qr_code.png"
             width={300}
           />
         </a>
