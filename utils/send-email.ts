@@ -1,17 +1,17 @@
 import { FormData } from "@/types/FormData";
+import { redirect } from "next/navigation";
 
-export function sendEmail(data: FormData) {
+export async function sendEmail(data: FormData) {
   const apiEndpoint = "/api/email";
 
-  fetch(apiEndpoint, {
+  const response = await fetch(apiEndpoint, {
     method: "POST",
     body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      alert(response.message);
-    })
-    .catch((error) => {
-      alert(error);
-    });
+  }).then((res) => res.json());
+
+  if (response.sent) {
+    redirect('/');
+  } else {
+    alert(response.error);
+  }
 }

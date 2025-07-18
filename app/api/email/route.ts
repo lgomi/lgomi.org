@@ -22,9 +22,16 @@ export async function POST(request: NextRequest) {
     from: process.env.FROM,
     to: process.env.TO,
     subject: `New contact from lgomi.org: ${subject}`,
-    text: `
-      From: ${name}: ${email}
-      Message: ${message}
+    html: `
+    <p>
+      <span style="font-weight:bold;">Name</span>: <span>${name}</span>
+    </p>
+    <p>
+      <span style="font-weight:bold;">Email</span>: <span>${email}</span>
+    </p>
+    <p>
+      <span style="font-weight:bold;">Message</span>: <span>${message}</span>
+    </p>
     `,
   };
 
@@ -42,8 +49,8 @@ export async function POST(request: NextRequest) {
   try {
     await sendMailPromise();
 
-    return NextResponse.json({ message: "Email Sent." });
+    return NextResponse.json({ message: "Email Sent.", sent: true });
   } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
+    return NextResponse.json({ error, sent: false }, { status: 500 });
   }
 }
