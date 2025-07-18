@@ -9,6 +9,9 @@ const config = {
   ],
   theme: {
     extend: {
+      listStyleImage: {
+        checkmark: "url(/list-image.svg)",
+      },
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],

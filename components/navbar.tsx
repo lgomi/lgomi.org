@@ -20,7 +20,7 @@ import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { contact, join } = siteConfig.navButtonItems;
+  const { contact, join, store } = siteConfig.navButtonItems;
 
   const navbarMenuItems = siteConfig.navItems.map((item, index) => (
     <NavbarMenuItem key={index}>
@@ -69,12 +69,11 @@ export const Navbar = () => {
 
       <NavbarContent className="sm:flex basis-1/5 sm:basis-full" justify="end">
         <Link
-          isDisabled
           className={`${buttonStyles({
             color: "secondary",
             radius: "full",
             variant: "shadow",
-          })} font-bold hidden`}
+          })} font-bold`}
           href={contact.href}
         >
           {contact.label}
@@ -89,6 +88,17 @@ export const Navbar = () => {
           href={join.href}
         >
           {join.label}
+        </Link>
+        <Link
+          isExternal
+          className={`${buttonStyles({
+            color: "primary",
+            radius: "full",
+            variant: "shadow",
+          })} font-bold`}
+          href={store.href}
+        >
+          {store.label}
         </Link>
       </NavbarContent>
     </HeroUINavbar>

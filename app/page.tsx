@@ -11,14 +11,9 @@ export default function Home() {
           width={1084}
         />
       </div>
+      <h1 className="text-2xl">Defend Equality. Train Responsibly. Build Community.</h1>
       <div className="text-center">
-        <p className="mb-4">
-          Apologies! We&apos;re still working on getting our website built.
-        </p>
-
-        <p className="mb-4">
-          In the meantime, follow us and/or shoot us a message on BlueSky:
-        </p>
+        <p className="mb-4">Follow us on BlueSky:</p>
         <a
           className="mb-4 font-bold text-blue-500 flex justify-center gap-2"
           href="https://bsky.app/profile/lgomi.bsky.social"

@@ -13,14 +13,14 @@ export const siteConfig = {
       label: "About Us",
       href: "/about",
     },
-    {
-      label: "Events",
-      href: "/events",
-    },
-    {
-      label: "Resources",
-      href: "/resources",
-    },
+    // {
+    //   label: "Events",
+    //   href: "/events",
+    // },
+    // {
+    //   label: "Resources",
+    //   href: "/resources",
+    // },
   ],
   navButtonItems: {
     contact: {
@@ -30,6 +30,10 @@ export const siteConfig = {
     join: {
       label: "Request to Join",
       href: "/join",
+    },
+    store: {
+      label: "Store",
+      href: "https://lgomi-merch.printful.me/",
     },
   },
 };
