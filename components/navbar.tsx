@@ -73,7 +73,7 @@ export const Navbar = () => {
             color: "secondary",
             radius: "full",
             variant: "shadow",
-          })} font-bold hidden`}
+          })} font-bold`}
           href={contact.href}
         >
           {contact.label}
