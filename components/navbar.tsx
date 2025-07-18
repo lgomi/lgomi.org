@@ -21,29 +21,34 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { contact, join, store } = siteConfig.navButtonItems;
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  }
 
   const navbarMenuItems = siteConfig.navItems.map((item, index) => (
     <NavbarMenuItem key={index}>
-      <NextLink
+      <Link
         className={clsx(
           linkStyles({ color: "foreground" }),
           "data-[active=true]:text-primary data-[active=true]:font-medium",
         )}
         color="foreground"
         href={item.href}
+        onPress={handleMenuItemClick}
       >
         {item.label}
-      </NextLink>
+      </Link>
     </NavbarMenuItem>
   ));
 
   return (
     <HeroUINavbar
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       position="sticky"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent className="basis-1/5" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
@@ -58,7 +63,7 @@ export const Navbar = () => {
             />
           </NextLink>
         </NavbarBrand>
-        <NavbarMenu className="lg:flex gap-4 justify-start ml-2">
+        <NavbarMenu className="lg:flex gap-4 justify-start ml-2 max-h-40">
           {navbarMenuItems}
         </NavbarMenu>
       </NavbarContent>
