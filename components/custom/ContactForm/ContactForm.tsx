@@ -1,5 +1,5 @@
 "use client";
-import { FormEvent } from "react";
+import { useForm } from "react-hook-form";
 import {
   Button,
   Card,
@@ -12,20 +12,21 @@ import {
   Textarea,
 } from "@heroui/react";
 
+import { FormData } from "@/types/FormData";
+import { sendEmail } from "@/utils/send-email";
 import HoneyPot from "@/components/custom/HoneyPot/HoneyPot";
 import { forms } from "@/config/forms";
 
 export default function ContactForm() {
-  const onContactFormSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const { register, handleSubmit } = useForm<FormData>();
 
-    // let contactData = Object.fromEntries(new FormData(event.currentTarget));
-    // Todo  - add form handling logic
-  };
+  function onSubmit(data: FormData) {
+    sendEmail(data);
+  }
 
   return (
     <Card className="p-4">
-      <Form className="gap-4" onSubmit={onContactFormSubmit}>
+      <Form className="gap-4" onSubmit={handleSubmit(onSubmit)}>
         <CardHeader>
           <p className="text-left">
             Have questions about our organization? Not sure about joining yet?
@@ -44,9 +45,12 @@ export default function ContactForm() {
                   isRequired={field.required}
                   label={field.label}
                   maxRows={10}
-                  name={field.id}
                   placeholder={field.placeholder ?? field.label}
                   validate={field.validation}
+                  {...register(
+                    field.id as "email" | "name" | "subject" | "message",
+                    { required: field.required },
+                  )}
                 />
               );
             } else {
@@ -56,9 +60,12 @@ export default function ContactForm() {
                   errorMessage={field.errorMessage}
                   isRequired={field.required}
                   label={field.label}
-                  name={field.id}
                   placeholder={field.placeholder ?? field.label}
                   type={field.type}
+                  {...register(
+                    field.id as "email" | "name" | "subject" | "message",
+                    { required: field.required },
+                  )}
                 />
               );
             }
